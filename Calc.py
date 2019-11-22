@@ -1,3 +1,5 @@
+import sys
+
 from RPN_calculator.Stack import Stack
 
 
@@ -55,7 +57,7 @@ def main():
     print("Example Input: 3 4.5 + ? 5 * ? 0 / ? 4 + ? ^ ? !")
     print(">", end=' ')
     while True:
-        user_input = input().split()
+        user_input = sys.stdin.readline().split()
         for i in user_input:
             try:
                 float(i)
